@@ -1,0 +1,28 @@
+body {
+  margin: 0;                     /* Removes default page margins */
+  height: 100vh;                 /* Makes the container fill the full viewport height */
+  display: flex;                 /* Enables Flexbox layout */
+  justify-content: center;       /* Centers the button horizontally */
+  align-items: center;           
+}
+#btn-change{
+  background-color: rgb(220, 63, 20);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+#message {
+  position: fixed;  /* ou absolute */
+  bottom: 30px;
+  color: "brown";
+  
+
+  left: 50%;
+  transform: translateX(-30%); /* centré horizontalement */
+}
+.hidden{
+  display: none
+}

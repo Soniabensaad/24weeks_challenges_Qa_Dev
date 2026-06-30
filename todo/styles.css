@@ -1,0 +1,22 @@
+
+body {
+  background-color: #0a192f; /* Votre fond bleu */
+  color: #ffffff;            /* Couleur du texte général en blanc */
+  margin: 0;                 /* Supprime les espaces d'origine du navigateur */
+  font-family: Arial, sans-serif; /* Une police plus propre */
+}
+
+/* Position et couleur du titre h1 */
+h1 {
+  text-align: center;        /* Centre le texte horizontalement */
+  margin-top: 40px;          /* Aligne le titre par rapport au haut de l'écran */
+  margin-bottom: 20px;       /* Espace sous le titre avant la barre de saisie */
+  color: #cbd5e1;            /* Votre couleur gris clair pour le titre */
+}
+
+.container {
+  display: flex;
+  justify-content: center;   /* Centre la barre et le bouton au milieu */
+  gap: 10px;                 /* Espace entre l'input et le bouton */
+  margin-bottom: 20px;
+}
