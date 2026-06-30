@@ -14,6 +14,16 @@ h1 {
   color: #cbd5e1;            /* Votre couleur gris clair pour le titre */
 }
 
+
+/* This with this line, we hide the default bullet points from the <li> tag */
+li{
+  list-style-type: none;
+}
+
+.hiddenElement{
+  display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;   /* Centre la barre et le bouton au milieu */
