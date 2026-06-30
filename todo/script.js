@@ -2,6 +2,9 @@ const inputAdd = document.getElementById("inputTask")
 const btn = document.getElementById("btnAdd")
 const list = document.getElementById("myList")
 let count = 0
+
+ 
+
 btn.addEventListener("click", function(){
   //create a div fot the notes
   const wrapNote = document.createElement("div")
