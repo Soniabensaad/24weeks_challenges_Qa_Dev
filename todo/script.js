@@ -1,48 +1,33 @@
 const inputAdd = document.getElementById("inputTask")
 const btn = document.getElementById("btnAdd")
 const list = document.getElementById("myList")
+const temporaryList = document.getElementById("temporary_listElement_id")
 let count = 0
 
  
 
 btn.addEventListener("click", function(){
-  //create a div fot the notes
-  const wrapNote = document.createElement("div")
-  wrapNote.style.marginTop = "8px" // space between notes
-
-  //create a checkbox to check
-  const checkboxNote =  document.createElement("input") // for every inputTask
-  checkboxNote.type = "checkbox"
-  
-
-
-  // Create the text for (label) 
-    const label = document.createElement("label");
-    label.textContent = inputAdd .value;
+  const newLine = temporaryList.cloneNode(true)
+  newLine.classList.remove("hiddenElement")
+  const checkboxNote =newLine.querySelector("input")
+  const labelNote =newLine.querySelector("label")
+labelNote.textContent = inputAdd .value;
     inputAdd .value = "";
      checkboxNote.id = "task-" + count 
-   label.htmlFor = "task-" + count
+   labelNote.htmlFor = "task-" + count
    count++
-    label.style.marginLeft = "5px";
-
-    //  Assembler les éléments
-    wrapNote.appendChild(checkboxNote);
-    wrapNote.appendChild(label);
-
-    //  Ajouter le tout sous l'input
-    list.appendChild(wrapNote);
-
-
-    checkboxNote.addEventListener("change", (e)=>{
+   list.appendChild(newLine)
+   checkboxNote.addEventListener("change",(e)=>{
 if(e.target.checked){
-  label.style.textDecoration = "line-through";
-    label.style.color = "#888"; // 
+  labelNote.style.textDecoration = "line-through";
+    labelNote.style.color = "#888"; // 
   } else {
-    label.style.textDecoration = "none";
-    label.style.color = "#000";
+    labelNote.style.textDecoration = "none";
+    labelNote.style.color = "#dbc5c5cd";
   }
 }
 
 )
-})
 
+   
+})
