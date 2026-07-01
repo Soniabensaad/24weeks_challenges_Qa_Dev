@@ -5,10 +5,10 @@ const temporaryList = document.getElementById("temporary_listElement_id")
 let count = 0
 
  // un petit truc pour l'indentation du code avec vscode, (ctrl+a) pour selectionner toute la page, ctrl+k+f
-
+// Il y a une facon d'implémenter cette fonctionnalité sans déclarer manuellement un EventListener... (ps: regarde dans tes autres fichiers, tu as deja fait ca!)
 btn.addEventListener("click", function(){
   const newLine = temporaryList.cloneNode(true)
-  newLine.classList.remove("hiddenElement")
+  newLine.classList.remove("hiddenElement") // ici, il y aurait une facon de ne pas utiliser de classes dutout et seulement en changeant l'id l'élément serait automatiquement visible...
   const checkboxNote =newLine.querySelector("input")
   const labelNote =newLine.querySelector("label")
 labelNote.textContent = inputAdd .value;
