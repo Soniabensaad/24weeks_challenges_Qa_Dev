@@ -4,7 +4,7 @@ const list = document.getElementById("myList")
 const temporaryList = document.getElementById("temporary_listElement_id")
 let count = 0
 
- 
+ // un petit truc pour l'indentation du code avec vscode, (ctrl+a) pour selectionner toute la page, ctrl+k+f
 
 btn.addEventListener("click", function(){
   const newLine = temporaryList.cloneNode(true)
