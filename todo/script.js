@@ -17,6 +17,7 @@ labelNote.textContent = inputAdd .value;
    labelNote.htmlFor = "task-" + count
    count++
    list.appendChild(newLine)
+   //Il y a une facon d'implémenter cette fonctionnalité sans utiliser de javascript!
    checkboxNote.addEventListener("change",(e)=>{
 if(e.target.checked){
   labelNote.style.textDecoration = "line-through";
