@@ -19,7 +19,7 @@ h1 {
 li{
   list-style-type: none;
 }
-
+/* Ici, on pourrait utiliser l'id de l'élément à la place et on pourrait enlever completement la classe hiddenElement de l'html et du css (ce commentaire est en lien avec un autre commentaire du fichier js...)*/
 .hiddenElement{
   display: none;
 }
