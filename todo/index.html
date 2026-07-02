@@ -1,32 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>To-do List</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
 
-    <h1>To-do List</h1>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <div class="container">
-      <input type="text" id="inputTask" placeholder="Add a task please...">
-      <!-- En lien avec un commentaire du fichier .js, est-ce qu'il y aurait une façon d'appeler directement une fonction 
-       lorsqu'on clique sur le bouton à la place d'avoir a faire un EventListener??? 
-       Est-ce que l'id est vraiement nécéssaire? Ou est l'attribut 'type'? -->
-      <button id="btnAdd">Add</button>
-    </div>
+  <h1>To-do List</h1>
 
-    <ul id="myList">
-      <!-- Why adding an element already? Because creating styles from dom is a pain in the A** so, we pre-create them and hide them, then we clone it and modify its content! -->
-        <li id="temporary_listElement_id" class="hiddenElement">
-          <!-- When this list item (li) is not hidden, clicking on the label automatically check the box. in order for this to work, 
-           the id of the input and the for of the label must be unique and must match.
-           Since we are going to duplicate it, we will need to manage the ids in .js
-           -->
-          <input type="checkbox" name="checkbox" id="temporary_id">
-          <label for="temporary_id">Item label</label>
-        </li>
-    </ul>
-    <script src="script.js"></script>
-  </body>
-</html>
+  <div class="container">
+    <input
+      type="text"
+      id="inputTask"
+      placeholder="Add a task please..."
+    >
+
+    <!-- type="button" évite un comportement inattendu si un formulaire est ajouté -->
+    <!-- onclick permet d'appeler directement une fonction -->
+    <button type="button" onclick="addTask()">Add</button>
+  </div>
+
+  <ul id="myList">
+    <!-- L'élément est caché uniquement grâce à son id -->
+    <li id="temporary_listElement_id">
+      <input type="checkbox" id="temporary_id">
+      <label for="temporary_id">Item label</label>
+    </li>
+  </ul>
+
+  <script src="script.js"></script>
+
+</body>

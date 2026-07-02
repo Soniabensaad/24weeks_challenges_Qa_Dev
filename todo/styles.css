@@ -1,32 +1,35 @@
-
 body {
-  background-color: #0a192f; /* Votre fond bleu */
-  color: #ffffff;            /* Couleur du texte général en blanc */
-  margin: 0;                 /* Supprime les espaces d'origine du navigateur */
-  font-family: Arial, sans-serif; /* Une police plus propre */
+  background-color: #0a192f;
+  color: #ffffff;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Position et couleur du titre h1 */
 h1 {
-  text-align: center;        /* Centre le texte horizontalement */
-  margin-top: 40px;          /* Aligne le titre par rapport au haut de l'écran */
-  margin-bottom: 20px;       /* Espace sous le titre avant la barre de saisie */
-  color: #cbd5e1;            /* Votre couleur gris clair pour le titre */
-}
-
-
-/* This with this line, we hide the default bullet points from the <li> tag */
-li{
-  list-style-type: none;
-}
-/* Ici, on pourrait utiliser l'id de l'élément à la place et on pourrait enlever completement la classe hiddenElement de l'html et du css (ce commentaire est en lien avec un autre commentaire du fichier js...)*/
-.hiddenElement{
-  display: none;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #cbd5e1;
 }
 
 .container {
   display: flex;
-  justify-content: center;   /* Centre la barre et le bouton au milieu */
-  gap: 10px;                 /* Espace entre l'input et le bouton */
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+/* Plus besoin de classe hiddenElement */
+#temporary_listElement_id {
+  display: none;
+}
+
+/* Le texte barré est géré uniquement en CSS */
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #888888;
 }
